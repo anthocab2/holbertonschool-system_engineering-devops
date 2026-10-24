@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1290" viewBox="0 0 1800 1290" role="img" aria-label="1 · Distributed web infrastructure"><title>1 · Distributed web infrastructure</title><defs><marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2867a8"/></marker><marker id="teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#167d8d"/></marker><marker id="violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7652a6"/></marker><marker id="green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#247b56"/></marker><marker id="orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#a9611c"/></marker><marker id="muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52677b"/></marker></defs><style>text{font-family:Arial,Helvetica,sans-serif;fill:#142b43} .edge{fill:none;stroke-width:3;stroke-linejoin:round;stroke-linecap:round} .label{paint-order:stroke;stroke:white;stroke-width:9;stroke-linejoin:round}</style><rect width="1800" height="1290" fill="white"/>
+<text x="40" y="56" font-size="37" font-weight="bold" text-anchor="start" style="fill:#142b43" ><tspan x="40" dy="0">1 · Distributed web infrastructure</tspan></text>
+<text x="42" y="94" font-size="22" font-weight="normal" text-anchor="start" style="fill:#52677b" ><tspan x="42" dy="0">Three hosts · two active application stacks · one MySQL writer</tspan></text>
+<g data-box="60,150,420,105">
+<rect x="60" y="150" width="420" height="105" rx="12" fill="#eef5fc" stroke="#2867a8" stroke-width="2.5" />
+<text x="82" y="184" font-size="24" font-weight="bold" text-anchor="start" style="fill:#2867a8" ><tspan x="82" dy="0">User / browser</tspan></text>
+<text x="82" y="217" font-size="22" font-weight="normal" text-anchor="start" style="fill:#142b43" ><tspan x="82" dy="0">http://www.foobar.com</tspan></text>
+</g>
+<g data-box="1110,150,625,105">
+<rect x="1110" y="150" width="625" height="105" rx="12" fill="#eef5fc" stroke="#2867a8" stroke-width="2.5" />
+<text x="1132" y="184" font-size="24" font-weight="bold" text-anchor="start" style="fill:#2867a8" ><tspan x="1132" dy="0">DNS · foobar.com</tspan></text>
+<text x="1132" y="217" font-size="22" font-weight="normal" text-anchor="start" style="fill:#142b43" ><tspan x="1132" dy="0">www.foobar.com.   A   8.8.8.8</tspan></text>
+</g>
+<polyline class="edge" points="480,186 1110,186" stroke="#52677b" marker-end="url(#muted)" marker-start="url(#muted)" stroke-dasharray="9 6"/>
+<text x="790" y="174" font-size="20" font-weight="normal" text-anchor="middle" style="fill:#52677b" class="label"><tspan x="790" dy="0">DNS query / IP response</tspan></text>
+<rect x="540" y="295" width="690" height="205" rx="12" fill="white" stroke="#52677b" stroke-width="2.5" stroke-dasharray="8 6"/>
+<text x="560" y="329" font-size="24" font-weight="bold" text-anchor="start" style="fill:#142b43" ><tspan x="560" dy="0">S1 · load-balancer host · 8.8.8.8</tspan></text>
+<g data-box="565,355,640,120">
+<rect x="565" y="355" width="640" height="120" rx="12" fill="#eef5fc" stroke="#2867a8" stroke-width="2.5" />
+<text x="587" y="389" font-size="24" font-weight="bold" text-anchor="start" style="fill:#2867a8" ><tspan x="587" dy="0">HAProxy · load balancer</tspan></text>
+<text x="587" y="422" font-size="22" font-weight="normal" text-anchor="start" style="fill:#142b43" ><tspan x="587" dy="0">Round robin + health checks</tspan><tspan x="587" dy="30">HTTP :80 → either healthy web server</tspan></text>
+</g>
+<polyline class="edge" points="270,255 270,415 540,415" stroke="#2867a8" marker-end="url(#blue)" marker-start="url(#blue)" />
+<text x="322" y="394" font-size="20" font-weight="normal" text-anchor="middle" style="fill:#52677b" class="label"><tspan x="322" dy="0">HTTP / TCP 80</tspan></text>
+<rect x="70" y="580" width="740" height="535" rx="12" fill="white" stroke="#52677b" stroke-width="2.5" stroke-dasharray="8 6"/>
+<text x="90" y="614" font-size="24" font-weight="bold" text-anchor="start" style="fill:#142b43" ><tspan x="90" dy="0">S2 · backend host · 10.0.0.11</tspan></text>
+<text x="90" y="644" font-size="20" font-weight="normal" text-anchor="start" style="fill:#52677b" ><tspan x="90" dy="0">Both backends serve web requests (active-active).</tspan></text>
+<g data-box="95,680,690,65">
+<rect x="95" y="680" width="690" height="65" rx="12" fill="#eef5fc" stroke="#2867a8" stroke-width="2.5" />
+<text x="117" y="714" font-size="24" font-weight="bold" text-anchor="start" style="fill:#2867a8" ><tspan x="117" dy="0">Nginx · static files / reverse proxy</tspan></text>
+<text x="117" y="747" font-size="22" font-weight="normal" text-anchor="start" style="fill:#142b43" ></text>
+</g>
+<g data-box="95,790,690,95">
+<rect x="95" y="790" width="690" height="95" rx="12" fill="#edf8f6" stroke="#167d8d" stroke-width="2.5" />
+<text x="117" y="824" font-size="24" font-weight="bold" text-anchor="start" style="fill:#167d8d" ><tspan x="117" dy="0">Gunicorn + application files</tspan></text>
+<text x="117" y="857" font-size="22" font-weight="normal" text-anchor="start" style="fill:#142b43" ><tspan x="117" dy="0">Same application release on both hosts</tspan></text>
+</g>
+<polyline class="edge" points="435,745 435,790" stroke="#2867a8" marker-end="url(#blue)"  />
+<g data-box="95,940,690,90">
+<rect x="95" y="940" width="690" height="90" rx="12" fill="#f5f0fc" stroke="#7652a6" stroke-width="2.5" />
+<text x="117" y="974" font-size="24" font-weight="bold" text-anchor="start" style="fill:#7652a6" ><tspan x="117" dy="0">MySQL · PRIMARY</tspan></text>
+<text x="117" y="1007" font-size="22" font-weight="normal" text-anchor="start" style="fill:#142b43" ><tspan x="117" dy="0">All writes and freshness-sensitive reads</tspan></text>
+</g>
+<rect x="990" y="580" width="740" height="535" rx="12" fill="white" stroke="#52677b" stroke-width="2.5" stroke-dasharray="8 6"/>
+<text x="1010" y="614" font-size="24" font-weight="bold" text-anchor="start" style="fill:#142b43" ><tspan x="1010" dy="0">S3 · backend host · 10.0.0.12</tspan></text>
+<text x="1010" y="644" font-size="20" font-weight="normal" text-anchor="start" style="fill:#52677b" ><tspan x="1010" dy="0">Both backends serve web requests (active-active).</tspan></text>
+<g data-box="1015,680,690,65">
+<rect x="1015" y="680" width="690" height="65" rx="12" fill="#eef5fc" stroke="#2867a8" stroke-width="2.5" />
+<text x="1037" y="714" font-size="24" font-weight="bold" text-anchor="start" style="fill:#2867a8" ><tspan x="1037" dy="0">Nginx · static files / reverse proxy</tspan></text>
+<text x="1037" y="747" font-size="22" font-weight="normal" text-anchor="start" style="fill:#142b43" ></text>
+</g>
+<g data-box="1015,790,690,95">
+<rect x="1015" y="790" width="690" height="95" rx="12" fill="#edf8f6" stroke="#167d8d" stroke-width="2.5" />
+<text x="1037" y="824" font-size="24" font-weight="bold" text-anchor="start" style="fill:#167d8d" ><tspan x="1037" dy="0">Gunicorn + application files</tspan></text>
+<text x="1037" y="857" font-size="22" font-weight="normal" text-anchor="start" style="fill:#142b43" ><tspan x="1037" dy="0">Same application release on both hosts</tspan></text>
+</g>
+<polyline class="edge" points="1355,745 1355,790" stroke="#2867a8" marker-end="url(#blue)"  />
+<g data-box="1015,940,690,90">
+<rect x="1015" y="940" width="690" height="90" rx="12" fill="#f5f0fc" stroke="#7652a6" stroke-width="2.5" />
+<text x="1037" y="974" font-size="24" font-weight="bold" text-anchor="start" style="fill:#7652a6" ><tspan x="1037" dy="0">MySQL · REPLICA</tspan></text>
+<text x="1037" y="1007" font-size="22" font-weight="normal" text-anchor="start" style="fill:#142b43" ><tspan x="1037" dy="0">Read-only application queries; may lag</tspan></text>
+</g>
+<polyline class="edge" points="725,500 725,550 750,550 750,680" stroke="#2867a8" marker-end="url(#blue)"  />
+<polyline class="edge" points="1045,500 1045,550 1670,550 1670,680" stroke="#2867a8" marker-end="url(#blue)"  />
+<text x="900" y="537" font-size="20" font-weight="normal" text-anchor="middle" style="fill:#52677b" class="label"><tspan x="900" dy="0">HTTP :80 · alternate between healthy backends</tspan></text>
+<polyline class="edge" points="440,885 440,940" stroke="#7652a6" marker-end="url(#violet)"  />
+<polyline class="edge" points="1360,885 1360,905 775,905 775,940" stroke="#7652a6" marker-end="url(#violet)"  />
+<text x="900" y="891" font-size="20" font-weight="normal" text-anchor="middle" style="fill:#7652a6" class="label"><tspan x="900" dy="0">Both apps write to PRIMARY</tspan></text>
+<polyline class="edge" points="1360,885 1360,940" stroke="#7652a6" marker-end="url(#violet)"  />
+<text x="1470" y="921" font-size="18" font-weight="normal" text-anchor="middle" style="fill:#7652a6" class="label"><tspan x="1470" dy="0">Optional reads</tspan></text>
+<polyline class="edge" points="785,985 1015,985" stroke="#7652a6" marker-end="url(#violet)"  stroke-dasharray="9 6"/>
+<text x="900" y="1016" font-size="18" font-weight="normal" text-anchor="middle" style="fill:#7652a6" class="label"><tspan x="900" dy="0">Replication</tspan></text>
+<text x="95" y="1063" font-size="20" font-weight="normal" text-anchor="start" style="fill:#52677b" ><tspan x="95" dy="0">Primary → replica data flow; replica pulls and applies the binary log.</tspan></text>
+<rect x="40" y="1164" width="1720" height="94" rx="10" fill="#f2f5f8"/>
+<text x="62" y="1199" font-size="21" font-weight="normal" text-anchor="start" style="fill:#52677b" ><tspan x="62" dy="0">Remaining issues: S1 is a SPOF; the MySQL primary is a write SPOF; no firewalls, no HTTPS, no monitoring.</tspan><tspan x="62" dy="28">Application redundancy is not database failover. Promotion of a replica requires an explicit failover procedure.</tspan></text>
+</svg>

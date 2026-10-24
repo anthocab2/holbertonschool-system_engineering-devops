@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1080" viewBox="0 0 1600 1080" role="img" aria-label="0 · Simple web stack"><title>0 · Simple web stack</title><defs><marker id="blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2867a8"/></marker><marker id="teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#167d8d"/></marker><marker id="violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7652a6"/></marker><marker id="green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#247b56"/></marker><marker id="orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#a9611c"/></marker><marker id="muted" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52677b"/></marker></defs><style>text{font-family:Arial,Helvetica,sans-serif;fill:#142b43} .edge{fill:none;stroke-width:3;stroke-linejoin:round;stroke-linecap:round} .label{paint-order:stroke;stroke:white;stroke-width:9;stroke-linejoin:round}</style><rect width="1600" height="1080" fill="white"/>
+<text x="40" y="56" font-size="37" font-weight="bold" text-anchor="start" style="fill:#142b43" ><tspan x="40" dy="0">0 · Simple web stack</tspan></text>
+<text x="42" y="94" font-size="22" font-weight="normal" text-anchor="start" style="fill:#52677b" ><tspan x="42" dy="0">One Linux server · www.foobar.com · HTTP over TCP/IP</tspan></text>
+<g data-box="60,170,420,138">
+<rect x="60" y="170" width="420" height="138" rx="12" fill="#eef5fc" stroke="#2867a8" stroke-width="2.5" />
+<text x="82" y="204" font-size="24" font-weight="bold" text-anchor="start" style="fill:#2867a8" ><tspan x="82" dy="0">User / web browser</tspan></text>
+<text x="82" y="237" font-size="22" font-weight="normal" text-anchor="start" style="fill:#142b43" ><tspan x="82" dy="0">Wants to visit</tspan><tspan x="82" dy="30">http://www.foobar.com</tspan></text>
+</g>
+<g data-box="780,150,690,138">
+<rect x="780" y="150" width="690" height="138" rx="12" fill="#eef5fc" stroke="#2867a8" stroke-width="2.5" />
+<text x="802" y="184" font-size="24" font-weight="bold" text-anchor="start" style="fill:#2867a8" ><tspan x="802" dy="0">DNS lookup</tspan></text>
+<text x="802" y="217" font-size="22" font-weight="normal" text-anchor="start" style="fill:#142b43" ><tspan x="802" dy="0">Zone: foobar.com</tspan><tspan x="802" dy="30">www.foobar.com.   A   8.8.8.8</tspan></text>
+</g>
+<polyline class="edge" points="480,204 780,204" stroke="#52677b" marker-end="url(#muted)"  stroke-dasharray="9 6"/>
+<text x="625" y="189" font-size="20" font-weight="normal" text-anchor="middle" style="fill:#52677b" class="label"><tspan x="625" dy="0">1. Resolve name</tspan></text>
+<polyline class="edge" points="780,263 480,263" stroke="#52677b" marker-end="url(#muted)"  stroke-dasharray="9 6"/>
+<text x="630" y="296" font-size="20" font-weight="normal" text-anchor="middle" style="fill:#52677b" class="label"><tspan x="630" dy="0">2. Return 8.8.8.8</tspan></text>
+<rect x="600" y="350" width="920" height="525" rx="12" fill="white" stroke="#52677b" stroke-width="2.5" stroke-dasharray="8 6"/>
+<text x="620" y="384" font-size="24" font-weight="bold" text-anchor="start" style="fill:#142b43" ><tspan x="620" dy="0">S1 · Linux server · 8.8.8.8</tspan></text>
+<text x="620" y="414" font-size="20" font-weight="normal" text-anchor="start" style="fill:#52677b" ><tspan x="620" dy="0">All service components share this single host.</tspan></text>
+<g data-box="650,445,820,110">
+<rect x="650" y="445" width="820" height="110" rx="12" fill="#eef5fc" stroke="#2867a8" stroke-width="2.5" />
+<text x="672" y="479" font-size="24" font-weight="bold" text-anchor="start" style="fill:#2867a8" ><tspan x="672" dy="0">Nginx · web server</tspan></text>
+<text x="672" y="512" font-size="22" font-weight="normal" text-anchor="start" style="fill:#142b43" ><tspan x="672" dy="0">Static files and reverse proxy</tspan></text>
+</g>
+<g data-box="650,620,465,135">
+<rect x="650" y="620" width="465" height="135" rx="12" fill="#edf8f6" stroke="#167d8d" stroke-width="2.5" />
+<text x="672" y="654" font-size="24" font-weight="bold" text-anchor="start" style="fill:#167d8d" ><tspan x="672" dy="0">Gunicorn · application server</tspan></text>
+<text x="672" y="687" font-size="22" font-weight="normal" text-anchor="start" style="fill:#142b43" ><tspan x="672" dy="0">Runs application code</tspan><tspan x="672" dy="30">Builds dynamic responses</tspan></text>
+</g>
+<g data-box="1160,620,310,135">
+<rect x="1160" y="620" width="310" height="135" rx="12" fill="#edf8f6" stroke="#167d8d" stroke-width="2.5" />
+<text x="1182" y="654" font-size="24" font-weight="bold" text-anchor="start" style="fill:#167d8d" ><tspan x="1182" dy="0">Application files</tspan></text>
+<text x="1182" y="687" font-size="22" font-weight="normal" text-anchor="start" style="fill:#142b43" ><tspan x="1182" dy="0">Code base</tspan><tspan x="1182" dy="30">Static assets</tspan></text>
+</g>
+<g data-box="650,790,820,65">
+<rect x="650" y="790" width="820" height="65" rx="12" fill="#f5f0fc" stroke="#7652a6" stroke-width="2.5" />
+<text x="672" y="824" font-size="24" font-weight="bold" text-anchor="start" style="fill:#7652a6" ><tspan x="672" dy="0">MySQL · persistent application data</tspan></text>
+<text x="672" y="857" font-size="22" font-weight="normal" text-anchor="start" style="fill:#142b43" ></text>
+</g>
+<polyline class="edge" points="270,308 270,500 650,500" stroke="#2867a8" marker-end="url(#blue)" marker-start="url(#blue)" />
+<text x="274" y="430" font-size="20" font-weight="normal" text-anchor="middle" style="fill:#52677b" class="label"><tspan x="274" dy="0">3. HTTP request</tspan><tspan x="274" dy="27">and response</tspan><tspan x="274" dy="27">TCP port 80</tspan></text>
+<polyline class="edge" points="880,555 880,620" stroke="#2867a8" marker-end="url(#blue)"  />
+<text x="1040" y="596" font-size="20" font-weight="normal" text-anchor="middle" style="fill:#52677b" class="label"><tspan x="1040" dy="0">Dynamic request</tspan></text>
+<polyline class="edge" points="1160,686 1115,686" stroke="#167d8d" marker-end="url(#teal)"  />
+<polyline class="edge" points="1315,620 1315,555" stroke="#167d8d" marker-end="url(#teal)"  />
+<text x="1420" y="596" font-size="20" font-weight="normal" text-anchor="middle" style="fill:#167d8d" class="label"><tspan x="1420" dy="0">Static assets</tspan></text>
+<polyline class="edge" points="880,755 880,790" stroke="#7652a6" marker-end="url(#violet)"  />
+<text x="1110" y="782" font-size="20" font-weight="normal" text-anchor="middle" style="fill:#52677b" class="label"><tspan x="1110" dy="0">SQL reads / writes</tspan></text>
+<text x="67" y="665" font-size="23" font-weight="normal" text-anchor="start" style="fill:#52677b" ><tspan x="67" dy="0">DNS finds the address.</tspan><tspan x="67" dy="31">It does not relay the</tspan><tspan x="67" dy="31">website response.</tspan></text>
+<rect x="40" y="954" width="1520" height="94" rx="10" fill="#f2f5f8"/>
+<text x="62" y="989" font-size="21" font-weight="normal" text-anchor="start" style="fill:#52677b" ><tspan x="62" dy="0">Limits: one host is a SPOF; stopping a service can cause downtime; capacity is limited to one machine.</tspan><tspan x="62" dy="28">Design only: the domain and 8.8.8.8 are assignment values. No live DNS or server changes are made.</tspan></text>
+</svg>
